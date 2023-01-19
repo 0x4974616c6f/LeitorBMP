@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\bin\\bmp_reader.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "miDebuggerPath": "C:\\msys64\\usr\\bin\\gdb.exe",
+      "preLaunchTask": "make"
+    }
+  ]
+}
