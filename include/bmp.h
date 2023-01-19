@@ -47,4 +47,4 @@ typedef struct BitmapInfoHeader BIHeader;
 
 void fillHeader(BFHeader *bf, FILE *fp);
 int selling(int x, int y);
-int checkBit(unsigned char *ch, int posicao);
+int checkBit(unsigned int *ch, int posicao);

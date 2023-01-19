@@ -26,6 +26,20 @@ int selling(int x, int y) {
     return (x%y ? x/y + 1 : x/y);
 }
 
-int checkBit(unsigned char *ch, int posicao){
-    __asm__("mov ebx,");
+int checkBit(unsigned int *ch, int posicao){
+    int ret;
+    asm("mov %1, %%ebx \n\t"
+        "mov (%%ebp, 0x08), %%eax \n\t"
+        "mov (%%eax), %%eax \n\t"
+        "bt %%eax, %%ebx \n\t"
+        "jc 1f \n\t"
+        "xor %%eax, %%eax \n\t"
+        "jmp 2f \n\t"
+        "1: xor %%eax, %%eax \n\t"
+        "inc %%eax \n\t"
+        "2:":"=a" (ret)
+        :"r" (posicao)
+        :"ebx"
+    );
+    return ret;
 }

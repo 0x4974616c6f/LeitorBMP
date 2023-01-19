@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     int larguraTotal = 0;
     int bytesPerRaw = 0;
     int y, x;
-    int byteAtual = 0;
+    unsigned int byteAtual = 0;
     int count = 0;
 
     if (argc < 2) {
@@ -46,8 +46,10 @@ int main(int argc, char *argv[]) {
 
     for (y = 0; y < bf.BIHeader.imageHeigth; y++) {
         for (x = 0; x < bytesPerRaw; x++) {
-            fread(byteAtual, 1, 1, fp);
-            
+            fread(&byteAtual, 1, 1, fp);
+            for(count = 0; count < 8; count++){
+                printf("%d", checkBit(&byteAtual, count));
+            }
         }
     }
 
