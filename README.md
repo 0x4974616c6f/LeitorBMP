@@ -8,30 +8,26 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-- GCC compiler
-- Make
+-   GCC compiler
+-   Make
 
 ### Installing
 
 1. Clone the repository
 
-    git clone https://github.com/username/bmp-reader.git
-
+    git clone https://github.com/0x4974616c6f/LeitorBMP.git
 
 2. Navigate to the project directory
 
-    cd bmp-reader
-
+    cd LeitorBMP
 
 3. Build the program
-    
-    make
 
+    make
 
 4. Run the program
 
     ./bin/bmp_reader test/test.bmp
-
 
 ### Running the tests
 
@@ -39,14 +35,13 @@ You can run the test script by using the following command
 
     make test
 
-
 ### Cleaning up
 
 You can remove all object files and the final executable binary by using the following command
 
     make clean
 
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
